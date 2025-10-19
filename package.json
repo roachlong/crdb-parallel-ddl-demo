@@ -1,0 +1,25 @@
+{
+  "name": "crdb-parallel-ddl-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "ddl:sequential": "tsx src/run-ddl-sequential.ts",
+    "ddl:parallel": "tsx src/run-ddl-parallel.ts",
+    "ddl:sequential:atlas": "ATLAS_MARK=true tsx src/run-ddl-sequential.ts",
+    "ddl:parallel:atlas": "ATLAS_MARK=true tsx src/run-ddl-parallel.ts",
+    "prisma:gen": "prisma generate"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "tsx": "^4.17.0",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "dotenv": "^16.4.5",
+    "execa": "^9.3.0",
+    "p-limit": "^6.0.0",
+    "prisma": "^5.22.0"
+  }
+}
