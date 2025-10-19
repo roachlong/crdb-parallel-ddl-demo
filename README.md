@@ -152,8 +152,7 @@ Logs are written to `./logs/ddl-sequential-*.csv|json`.
 Inspect:
 ```bash
 cockroach sql --insecure --host=127.0.0.1:26257 -d demo -e "SHOW TABLES;"
-atlas migrate status --dir file://migrations/fast_inline --url "$ATLAS_URL"
-atlas migrate status --dir file://migrations/separate_jobs --url "$ATLAS_URL"
+atlas migrate status --url "$ATLAS_URL"
 ```
 
 ---
